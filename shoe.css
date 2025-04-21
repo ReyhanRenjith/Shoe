@@ -1,0 +1,69 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+#home{
+    font-size: 30px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+#main{
+    font-size: 70px;
+    margin-left: 25%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+.head{
+    margin-top: 30px;
+    font-size: 50px;
+    margin-left: 15px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.pic{
+    width: 200px;
+    height: 240px;
+}
+.Shoe{
+    display: flex;
+    margin-left: 10px;
+    margin-bottom: 40px;
+}
+.shoe{
+    padding-left: 100px;
+}
+.shoe1{
+    margin-left: 50px;
+}
+.nt{
+    font-size: 18px;
+    margin-top: 10px;
+}
+.price{
+    color: gray;
+    margin-top: 10px;
+}
+.shop{
+    border: 0;
+    margin-right: 120px;
+    margin-top: 12px;
+    padding: 5px;
+    font-size: 13px;
+}
+hr{
+    margin-left: 16px;
+    margin-bottom: 30px;
+    margin-right: 60px;
+    margin-top: 5px;
+}
+.apic{
+    width: 200px;
+    height: 210px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+.ppic{
+    width: 200px;
+    margin-top: 10px;
+    height: 210px;
+    margin-bottom: 10px;
+}

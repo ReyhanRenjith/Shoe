@@ -1,0 +1,43 @@
+#back{
+    font-size: 34px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.preview{
+    display: flex;
+    margin-left: 50px;
+    margin-top: 20px;
+    border: 2px outset;
+    padding: 15px;
+    margin-right: 400px;
+}
+form{
+    margin-left: 50px;
+}
+#head{
+    font-size: 25px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.rad{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 18px;
+}
+#sixfive{
+    margin-left: 90px;
+    margin-bottom: 17px;
+}
+#sevenfive{
+    margin-left: 154px;
+}
+#subm{
+    margin-top: 12px;
+    padding: 5px;
+    font-size: 20px;
+    border-radius: 10px;
+}
+a{
+    text-decoration: none;
+    color: black;
+}

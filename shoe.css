@@ -7,6 +7,7 @@
     margin-left: 10px;
     margin-bottom: 10px;
     margin-top: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 #main{
     font-size: 70px;
@@ -42,7 +43,7 @@
     color: gray;
     margin-top: 10px;
 }
-.shop{
+button{
     border: 0;
     margin-right: 120px;
     margin-top: 12px;

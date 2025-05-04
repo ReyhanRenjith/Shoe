@@ -11,7 +11,7 @@
 }
 #main{
     font-size: 70px;
-    margin-left: 25%;
+    margin-left: 27%;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
 }
 .head{
@@ -113,4 +113,8 @@ hr{
     margin-left: 0px;
     margin-top: 2px;
     margin-right: 122px;
+}
+#ha{
+    text-decoration: none;
+    color: black;
 }

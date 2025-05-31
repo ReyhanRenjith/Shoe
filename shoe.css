@@ -118,3 +118,12 @@ hr{
     text-decoration: none;
     color: black;
 }
+.img-container{
+    overflow: hidden;
+}
+.img-container img{
+    transition: transform 0.35s ease-in-out;
+}
+.img-container:hover img {
+  transform: scale(1.2);
+}

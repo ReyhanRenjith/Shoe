@@ -4,7 +4,6 @@
   <meta charset="UTF-8" />
   <title>Buy Now</title>
   <link rel="stylesheet" href="buy.css">
-
 </head>
 <body>
     <div class="topbar">
@@ -13,7 +12,9 @@
         </a>
     </div>
     <div class="preview">
+      <div class="img-zoom" id="img-zoom">
           <img id="productImage" src="" alt="Selected Product" width="300">
+          </div>
           <form>
             <label id="head">Select Size </label><br><br>
             <input type="radio" id="six" value="6" name="sz">
@@ -47,6 +48,20 @@
     } else {
       imageElement.alt = 'No product selected';
     }
+
+     const container = document.getElementById('img-zoom');
+    const image = document.getElementById('productImage');
+
+    container.addEventListener('mousemove', function (e) {
+      const rect = container.getBoundingClientRect();
+      const x = ((e.clientX - rect.left) / rect.width) * 100;
+      const y = ((e.clientY - rect.top) / rect.height) * 100;
+      image.style.transformOrigin = `${x}% ${y}%`;
+    });
+
+    container.addEventListener('mouseleave', function () {
+      image.style.transformOrigin = 'center center';
+    });
   </script>
 </body>
 </html>

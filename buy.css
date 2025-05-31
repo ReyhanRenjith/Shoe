@@ -43,3 +43,23 @@ a{
     text-decoration: none;
     color: black;
 }
+
+    .img-zoom{
+      width: 400px;
+      height: 370px;
+      overflow: hidden;
+      position: relative;
+      border: 2px solid #ccc;
+    }
+
+    #productImage{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.2s ease;
+      transform: scale(1);
+    }
+
+    .img-zoom:hover #productImage {
+      transform: scale(2); /* zoom level */
+    }

@@ -1,53 +1,55 @@
 *{
     margin: 0px;
     padding: 0px;
+
 }
 #home{
-    font-size: 30px;
-    margin-left: 10px;
+    font-size: 50px;
+    margin-left: 20px;
     margin-bottom: 10px;
     margin-top: 10px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 #main{
     font-size: 70px;
-    margin-left: 27%;
+    margin-left: 30%;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
 }
 .head{
     margin-top: 30px;
     font-size: 50px;
-    margin-left: 59px;
+    margin-left: 117px;
 }
 .pic{
-    width: 200px;
-    height: 240px;
+    margin-top: 10px;
+    width: 230px;
+    height: 270px;
 }
 .Shoe{
     display: flex;
-    margin-left: 10px;
     margin-bottom: 40px;
 }
 .shoe{
-    padding-left: 100px;
+    padding-left: 110px;
 }
 .shoe1{
-    margin-left: 50px;
+    margin-left: 120px;
 }
 .nt{
-    font-size: 18px;
+    font-size: 130%;
     margin-top: 10px;
 }
 .price{
     color: gray;
-    margin-top: 10px;
+    margin-top: 17px;
+    font-size: 120%;
 }
 button{
     border: 0;
     margin-right: 120px;
-    margin-top: 12px;
+    margin-top: 20px;
     padding: 5px;
-    font-size: 13px;
+    font-size: 100%;
 }
 hr{
     margin-left: 16px;
@@ -125,4 +127,7 @@ hr{
 }
 .img-container:hover img {
   transform: scale(1.2);
+}
+#np{
+    scale: 1.1;
 }

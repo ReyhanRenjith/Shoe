@@ -81,7 +81,7 @@ hr{
     padding-bottom: 10px;
 }
 .fh{
-    font-size: 30px;
+    font-size: 33px;
     margin-top: 25px;
     margin-bottom: 10px;
     font-weight: bold;
@@ -90,20 +90,24 @@ hr{
     margin-left: 30px;
 }
 #f1t{
-    font-size: 15px;
+    font-size: 18px;
 }
 .f2{
-    margin-left: 110px;
+    margin-left: 130px;
 }
 .fta{
     text-decoration: none;
     color: white;
+    font-size: 110%;
 }
 .f3{
-    margin-left: 110px;
+    margin-left: 130px;
 }
 .f4{
-    margin-left: 110px;
+    margin-left: 130px;
+}
+.f4t{
+    font-size: 18px;
 }
 #mail{
     border: 0px;

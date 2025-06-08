@@ -3,16 +3,17 @@
     padding: 0px;
 
 }
-#home{
-    font-size: 50px;
+#logo{
     margin-left: 20px;
-    margin-bottom: 10px;
     margin-top: 10px;
+    width: 4%;
+    border-radius: 50%;
+    border: 3px black solid;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 #main{
     font-size: 70px;
-    margin-left: 30%;
+    margin-left: 31%;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
 }
 .head{
@@ -28,6 +29,9 @@
 .Shoe{
     display: flex;
     margin-bottom: 40px;
+}
+#line{
+    display: none;
 }
 .shoe{
     padding-left: 110px;
@@ -134,4 +138,56 @@ hr{
 }
 #np{
     scale: 1.1;
+}
+@media(max-width: 768px){
+    *{
+        margin-left: 0px;
+        padding-left: 0px;
+        
+    }
+    #logo{
+        width: 20%;
+        margin-left: 35%;
+    }
+    #main{
+        font-size: 50px;
+        margin-top: 10px;
+        margin-bottom: 0px;
+        margin-left: 30px;
+    }
+    .footer{
+        display: none;
+    }
+    #line{
+       display: block;
+        margin-right: 30px;
+        
+    }
+    .pic{
+        width: 340px;
+        height: auto;
+    }
+    .head{
+        display: none;
+        margin: 0px;
+        padding: 0px;
+    }
+    .shoe{
+        display: block;
+        padding-left: 40px;
+        margin-bottom: 30px;
+        padding-right: 0px;
+    }
+    .Shoe{
+        display: block;
+    }
+    .nt{
+        font-size: 35px;
+    }
+    .price{
+        font-size: 30px;
+    }
+    button{
+        font-size: 34px;
+    }
 }

@@ -63,3 +63,30 @@ a{
     .img-zoom:hover #productImage {
       transform: scale(2);
     }
+@media(max-width: 768px) {
+        .preview{
+            display: block;
+            margin-left: 0px;
+            padding-left: 0px;
+            margin: 0px;
+        }
+        form{
+            margin-left: 20px;   
+        }
+        #back{
+            margin-bottom: 0px;
+        }
+        .pree{
+            display: flex;
+        }
+        #productImage{
+            width: 400px;
+        }
+        .img-zoom{
+      width: 450px;
+      height: 400px;
+      overflow: hidden;
+      position: relative;
+      border: 0PX;
+    }
+    }

@@ -36,18 +36,24 @@
             <button onclick="showPopup()" style="cursor: pointer; color: rgb(82, 82, 82);font-weight: bold;" id="subm">Submit</button>
           </form>
     </div>
-  <script>
-    function showPopup() {
+   <script>
+    const form = document.querySelector('form');
+    form.addEventListener('submit', function (e) {
+    e.preventDefault(); 
+
+   
+    if (form.checkValidity()) {
       alert("Your Order was Placed!!!");
+    } else {
+      form.reportValidity(); 
     }
+  });
     const params = new URLSearchParams(window.location.search);
     const imageName = params.get('image');
     const imageElement = document.getElementById('productImage');
 
     if (imageName) {
       imageElement.src = 'images/' + imageName;
-    } else {
-      imageElement.alt = 'No product selected';
     }
 
      const container = document.getElementById('img-zoom');
@@ -63,6 +69,18 @@
     container.addEventListener('mouseleave', function () {
       image.style.transformOrigin = 'center center';
     });
+
+
+
+      function showCustomAlert() {
+    document.getElementById('overlay').style.display = 'block';
+    document.getElementById('customAlert').style.display = 'block';
+  }
+
+  function closeCustomAlert() {
+    document.getElementById('overlay').style.display = 'none';
+    document.getElementById('customAlert').style.display = 'none';
+  }
   </script>
 </body>
 </html>

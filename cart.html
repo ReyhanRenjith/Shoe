@@ -38,7 +38,7 @@
     }
 
     cart.forEach((item, index) => {
-      const price = parseInt(item.price.replace(/[^0-9]/g, ""));
+      const price = parseFloat(item.price.replace(/[₹,]/g, ""));
       total += price;
 
       const itemDiv = document.createElement("div");

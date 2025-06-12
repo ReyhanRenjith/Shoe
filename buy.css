@@ -102,7 +102,9 @@ body {
   font-weight: bold;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
-
+#desc{
+  padding-right: 30px;
+}
 .rec-item img {
   width: 100%;
   height: auto;
@@ -127,4 +129,9 @@ body {
 
 .img-zoom:hover #productImage {
   transform: scale(2.4);
+}
+@media (max-width:768px){
+  #desc{
+    display: none;
+  }
 }

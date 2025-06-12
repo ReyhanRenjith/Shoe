@@ -1,86 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Buy Now</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Buy Product - Aura Essentials</title>
+  <link rel="stylesheet" href="buy.css">
 </head>
-<link rel="stylesheet" href="buy.css">
 <body>
-    <div class="topbar">
-        <a href="index.html">
-        <p id="back">Back</p>
-        </a>
-    </div>
-    <div class="preview">
-      <div class="img-zoom" id="img-zoom">
-          <img id="productImage" src="" alt="Selected Product" width="300">
-          </div>
-          <form>
-            <label id="head">Select Size </label><br><br>
-            <input type="radio" id="six" value="6" name="sz">
-            <label class="rad" for="six">UK 6 (EU 40)</label>
-            <input type="radio" id="sixfive" value="UK 6.5" name="sz" required >
-            <label class="rad" for="sixfive">UK 6.5</label><br>
-            <input type="radio" id="seven" value="UK 7" name="sz">
-            <label class="rad" for="seven">UK 7</label>
-            <input type="radio" id="sevenfive" value="UK 7.5" name="sz">
-            <label class="rad" for="sevenfive">UK 7.5</label><br><br>
-            <label id="head">Payment Details</label><br><br>
-            <label class="rad" for="cnum">Card Number <sub><sub>(The 16 digits on the front of your card)</sub></sub> </label><br><br>
-            <input type="number" id="cnum" required placeholder="Enter card number" style="width: 330px;"><br><br>
-            <label class="rad" for="date">Expiry Date: </label>
-            <input type="date" id="date" required><br><br>
-            <label class="rad" for="cv">CVV2/CVC2: </label>
-            <input type="number" id="cv" required placeholder="3 digits on back" style="width: 110px;"><br><br>
-            <button onclick="showPopup()" style="cursor: pointer; color: rgb(82, 82, 82);font-weight: bold;" id="subm">Submit</button>
-          </form>
-    </div>
-   <script>
-    const form = document.querySelector('form');
-    form.addEventListener('submit', function (e) {
-    e.preventDefault(); 
 
-   
-    if (form.checkValidity()) {
-      alert("Your Order was Placed!!!");
-    } else {
-      form.reportValidity(); 
-    }
-  });
-    const params = new URLSearchParams(window.location.search);
-    const imageName = params.get('image');
-    const imageElement = document.getElementById('productImage');
+<a href="cart.html" class="floating-cart">🛒 Cart (<span id="cart-count">0</span>)</a>
+<a href="index.html" id="back">Back to Shop</a>
 
-    if (imageName) {
-      imageElement.src = 'images/' + imageName;
-    }
+<div class="main-product">
+  <div class="img-zoom" id="img-zoom">
+  <img id="productImage" src="" alt="Selected Product">
+  </div>
+  <div class="product-details">
+    <h1 id="productTitle">Product Title</h1>
+    <p id="productPrice">Rs. 2,999.00</p>
+    <button onclick="addToCart()">Add to Cart</button>
+  </div>
+</div>
 
-     const container = document.getElementById('img-zoom');
-    const image = document.getElementById('productImage');
+<hr class="divider">
+
+<h2 class="other-heading">Other Trendy Products You May Like</h2>
+<div class="recommend">
+  <div class="rec-item">
+    <a href="buy.html?image=Jordan Air Rev"><img src="images/Jordan Air Rev.png"></a>
+    <p>Jordan Air Rev</p>
+  </div>
+  <div class="rec-item">
+    <a href="buy.html?image=Luka 77 PF Bloodline"><img src="images/Luka 77 PF Bloodline.png"></a>
+    <p>Luka .77 PF "Bloodline"</p>
+  </div>
+</div>
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const image = params.get('image');
+  const imagePath = 'images/' + image +'.png';
+  const price = params.get('price');
+  document.getElementById('productTitle').innerHTML=image;
+
+  document.getElementById('productImage').src = imagePath;
+  document.getElementById('productPrice').textContent = `₹${price}`;
+  function addToCart() {
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    cart.push({
+      image: imagePath,
+      title: document.getElementById('productTitle').textContent,
+      price: document.getElementById('productPrice').textContent
+    });
+    localStorage.setItem('cart', JSON.stringify(cart));
+    updateCartCount();
+    alert("Item added to cart!");
+  }
+
+  function updateCartCount() {
+    const count = JSON.parse(localStorage.getItem('cart'))?.length || 0;
+    document.getElementById('cart-count').textContent = count;
+  }
+
+  updateCartCount();
+
+  const container = document.getElementById('img-zoom');
+  const image1 = document.getElementById('productImage');
 
     container.addEventListener('mousemove', function (e) {
       const rect = container.getBoundingClientRect();
       const x = ((e.clientX - rect.left) / rect.width) * 100;
       const y = ((e.clientY - rect.top) / rect.height) * 100;
-      image.style.transformOrigin = `${x}% ${y}%`;
+      image1.style.transformOrigin = `${x}% ${y}%`;
     });
 
     container.addEventListener('mouseleave', function () {
-      image.style.transformOrigin = 'center center';
+      image1.style.transformOrigin = 'center center';
     });
 
+</script>
 
-
-      function showCustomAlert() {
-    document.getElementById('overlay').style.display = 'block';
-    document.getElementById('customAlert').style.display = 'block';
-  }
-
-  function closeCustomAlert() {
-    document.getElementById('overlay').style.display = 'none';
-    document.getElementById('customAlert').style.display = 'none';
-  }
-  </script>
 </body>
 </html>

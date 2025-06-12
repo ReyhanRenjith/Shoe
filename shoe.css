@@ -92,12 +92,13 @@ html{
 #main{
     font-size: 70px;
     margin-left: 31%;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 .head{
     margin-top: 30px;
     font-size: 50px;
     margin-left: 117px;
+
 }
 .pic{
     margin-top: 10px;
